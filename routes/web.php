@@ -3,6 +3,8 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Http\Controllers\ApplyController;
+use App\Http\Controllers\CompleteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,14 +17,19 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+Route::get('session-data/{key}', function ($key) {
+    return (session($key) ?? []);
+})->name('session.get');
+Route::get('/', [ApplyController::class, 'create'])->name('apply.index');
+Route::post('personal-info', [ApplyController::class, 'storePersonalInfo'])->name('apply.store-personal-info');
+Route::post('church-info', [ApplyController::class, 'storeChurchInfo'])->name('apply.store-church-info');
+Route::post('health-info', [ApplyController::class, 'storeHealthInfo'])->name('apply.store-health-info');
+Route::post('criminal-info', [ApplyController::class, 'storeCriminalInfo'])->name('apply.store-criminal-info');
+Route::post('recommendation-info', [ApplyController::class, 'storeRecommendationInfo'])->name('apply.store-recommendation-info');
+Route::post('social-info', [ApplyController::class, 'storeSocialHistory'])->name('apply.store-social-info');
+Route::post('confirmation', [ApplyController::class, 'confirmation'])->name('apply.store-confirmation');
+Route::get('/complete', CompleteController::class)->name('apply.complete');
+
 
 Route::middleware([
     'auth:sanctum',

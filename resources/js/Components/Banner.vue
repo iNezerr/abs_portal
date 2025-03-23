@@ -1,16 +1,13 @@
 <script setup>
-import { ref, watchEffect } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { usePage } from '@inertiajs/vue3';
 
-const page = usePage();
 const show = ref(true);
-const style = ref('success');
-const message = ref('');
+const style = computed(() => usePage().props.jetstream.flash?.bannerStyle || 'success');
+const message = computed(() => usePage().props.jetstream.flash?.banner || '');
 
-watchEffect(async () => {
-    style.value = page.props.jetstream.flash?.bannerStyle || 'success';
-    message.value = page.props.jetstream.flash?.banner || '';
-    show.value = true;
+watch(message, async () => {
+  show.value = true;
 });
 </script>
 
