@@ -54,7 +54,7 @@ class ApplyController extends Controller
             'is_parent_or_guardian_car_owner' => 'required|string|in:Yes,No',
             'name_of_travel_sponsor' => 'required|string',
             'name_of_benefactor' => 'required|string',
-            'educational_certificate' => 'required|mimes:pdf|max:5120'
+            'educational_certificate' => 'nullable|mimes:pdf|max:5120'
         ]);
 
         if ($request->hasFile('educational_certificate') && $request->file('educational_certificate')->isValid()) {
@@ -79,7 +79,7 @@ class ApplyController extends Controller
             'explain_calling' => 'required_if:use_narcotics_currently,Yes|string',
             'church' => 'required|string',
             'role_in_church' => 'required|string',
-            'duration_of_service' => 'required|numeric|min:0|max:20',
+            'duration_of_service' => 'required|numeric|min:0|max:50',
             'history_before_born_again' => 'required|string',
             'history_of_present_church' => 'required|string',
             'history_of_roles_in_church' => 'required|string',
@@ -147,7 +147,7 @@ class ApplyController extends Controller
     {
         $rules = [
             'recommended_by' => 'required|string',
-            'recommendation_file' => 'required|mimes:pdf|max:10000', // PDF files, maximum size 10MB (10000 KB)
+            'recommendation_file' => 'nullable|mimes:pdf|max:10000', // PDF files, maximum size 10MB (10000 KB)
         ];
 
         // Only require recommendation_by_other if recommended_by is "Others"
@@ -259,11 +259,11 @@ class ApplyController extends Controller
         $details = [
             'title' => 'New Application Submitted',
             'body' => 'hello',
-            'email' => 'ebenagbekeye@gmail.com',
+            'email' => 'anagkazorecruitment@gmail.com',
             'files' => $files
         ];
 
-        dispatch(new SendNewApplicationEmailJob($details));
+        // dispatch(new SendNewApplicationEmailJob($details));
 
 
         try {
@@ -286,16 +286,19 @@ class ApplyController extends Controller
             session()->forget('social_info');
 
 
+            dispatch(new SendNewApplicationEmailJob($details));
+
+            Log::info('Mail sent');
 
             return to_route('apply.complete');
         } catch (PDOException $e) {
 
-
+            Log::error($e);
             return back()->withErrors(['error' => 'A Database error occured', 'message' => $e->getMessage()]);
 
         } catch (QueryException $e) {
 
-
+            Log::error($e);
             return back()->withErrors(['error' => 'A Database error occured', 'message' => $e->getMessage()]);
         } catch (\Exception $e) {
 
