@@ -80,7 +80,7 @@ onMounted(async () => {
                     <label
                         for="recommended_by"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("recommended_by") }}</label
+                        >{{ $t("recommended_by") }}</label
                     >
 
                     <Dropdown
@@ -88,7 +88,7 @@ onMounted(async () => {
                         :options="recommendedBy"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -102,7 +102,7 @@ onMounted(async () => {
                     <label
                         for="recommendation_by_other"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("recommendation_by_other") }}</label
+                        >{{ $t("recommendation_by_other") }}</label
                     >
 
                     <Textarea
@@ -122,7 +122,7 @@ onMounted(async () => {
                     <label
                         for="recommendation_file"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("recommendation_file") }}</label
+                        >{{ $t("recommendation_file") }}</label
                     >
 
                     <Fileinput
