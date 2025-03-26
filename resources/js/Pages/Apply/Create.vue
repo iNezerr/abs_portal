@@ -88,34 +88,35 @@ onMounted(() => {
 <template>
     <div>
         <GuestLayout title="Apply">
-            <div class="w-24 flex justify-content-end">
-                <Dropdown
-                    v-model="selectedLocale"
-                    :options="locales"
-                    optionLabel="label"
-                    optionValue="lang"
-                    class="w-full md:w-14rem"
-                    @change="setLocale"
-                >
-                    <template #value="slotProps">
-                        <div v-if="slotProps.value" class="flex">
-                            <span :class="[`fi fi-${slotProps.value}`]"></span>
-                        </div>
-                    </template>
-                    <template #option="slotProps">
-                        <span
-                            :class="[`fi fi-${slotProps.option.lang}`]"
-                        ></span>
-                        <!-- <div class="flex align-items-center">
+            <section
+                class="min-h-screen bg-gray-[250] flex flex-col max-w-7xl mx-auto shadow-lg border-2 mt-4 rounded-md px-4"
+            >
+                <div class="w-24 flex justify-end">
+                    <Dropdown
+                        v-model="selectedLocale"
+                        :options="locales"
+                        optionLabel="label"
+                        optionValue="lang"
+                        class="w-full md:w-14rem"
+                        @change="setLocale"
+                    >
+                        <template #value="slotProps">
+                            <div v-if="slotProps.value" class="flex">
+                                <span
+                                    :class="[`fi fi-${slotProps.value}`]"
+                                ></span>
+                            </div>
+                        </template>
+                        <template #option="slotProps">
+                            <span
+                                :class="[`fi fi-${slotProps.option.lang}`]"
+                            ></span>
+                            <!-- <div class="flex align-items-center">
                             <div>{{ slotProps.option.label }}</div>
                         </div> -->
-                    </template>
-                </Dropdown>
-            </div>
-
-            <section
-                class="min-h-screen flex flex-col max-w-7xl mx-auto shadow-md rounded-md px-4"
-            >
+                        </template>
+                    </Dropdown>
+                </div>
                 <div class="mx-4 p-4">
                     <div class="flex items-center">
                         <StepIndicatorItem

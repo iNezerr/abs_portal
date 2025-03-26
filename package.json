@@ -19,6 +19,7 @@
         "vue": "^3.2.31"
     },
     "dependencies": {
+        "flag-icons": "^6.11.0",
         "laravel-vue-i18n": "^2.7.1",
         "primeicons": "^6.0.1",
         "primevue": "^3.34.1",

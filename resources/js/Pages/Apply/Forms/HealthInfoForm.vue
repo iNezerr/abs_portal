@@ -81,7 +81,7 @@ onMounted(async () => {
                     <label
                         for="is_having_medical_condition"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("is_having_medical_condition") }}</label
+                        >{{ $t("is_having_medical_condition") }}</label
                     >
 
                     <Dropdown
@@ -89,7 +89,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -103,7 +103,7 @@ onMounted(async () => {
                     <label
                         for="medical_condition"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("medical_condition") }}</label
+                        >{{ $t("medical_condition") }}</label
                     >
 
                     <Textarea
@@ -124,7 +124,7 @@ onMounted(async () => {
                     <label
                         for="is_on_regular_medication"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("is_on_regular_medication") }}</label
+                        >{{ $t("is_on_regular_medication") }}</label
                     >
 
                     <Dropdown
@@ -132,7 +132,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -146,7 +146,7 @@ onMounted(async () => {
                     <label
                         for="medications"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("medications") }}</label
+                        >{{ $t("medications") }}</label
                     >
 
                     <Textarea
@@ -167,7 +167,7 @@ onMounted(async () => {
                     <label
                         for="has_had_major_surgeries"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("has_had_major_surgeries") }}</label
+                        >{{ $t("has_had_major_surgeries") }}</label
                     >
 
                     <Dropdown
@@ -175,7 +175,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="name"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -189,7 +189,7 @@ onMounted(async () => {
                     <label
                         for="surgeries"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("surgeries") }}</label
+                        >{{ $t("surgeries") }}</label
                     >
 
                     <Textarea
@@ -210,7 +210,7 @@ onMounted(async () => {
                     <label
                         for="is_having_allergies"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("is_having_allergies") }}</label
+                        >{{ $t("is_having_allergies") }}</label
                     >
 
                     <Dropdown
@@ -218,7 +218,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -232,7 +232,7 @@ onMounted(async () => {
                     <label
                         for="allergies"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("allergies") }}</label
+                        >{{ $t("allergies") }}</label
                     >
 
                     <Textarea
@@ -253,7 +253,7 @@ onMounted(async () => {
                     <label
                         for="diseases_treated"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("diseases_treated") }}</label
+                        >{{ $t("diseases_treated") }}</label
                     >
 
                     <Textarea

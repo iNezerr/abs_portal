@@ -14,7 +14,7 @@ defineProps({
 <template>
     <Head :title="title" />
     <Toast />
-    <div id="root">
+    <div id="root" class="bg-gray-[350]">
         <slot />
     </div>
 </template>

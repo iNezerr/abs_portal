@@ -66,7 +66,7 @@ onMounted(async () => {
                     <label
                         for="is_having_criminal_record"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("is_having_criminal_record") }}</label
+                        >{{ $t("is_having_criminal_record") }}</label
                     >
 
                     <Dropdown
@@ -74,7 +74,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        placeholder="{{ __('select_placeholder') }}"
+                        placeholder="{{ $t('select_placeholder') }}"
                         class="w-full md:w-14rem"
                     />
 
@@ -88,7 +88,7 @@ onMounted(async () => {
                     <label
                         for="criminal_records"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("criminal_records") }}</label
+                        >{{ $t("criminal_records") }}</label
                     >
 
                     <Textarea

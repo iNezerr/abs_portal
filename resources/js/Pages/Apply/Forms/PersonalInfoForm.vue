@@ -177,7 +177,7 @@ onMounted(async () => {
                     <label
                         for="last_name"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("last_name") }}</label
+                        >{{ $t("last_name") }}</label
                     >
 
                     <InputText

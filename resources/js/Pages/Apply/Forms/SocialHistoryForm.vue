@@ -127,7 +127,7 @@ onMounted(async () => {
                     <label
                         for="use_narcotics_currently"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("use_narcotics_currently") }}</label
+                        >{{ $t("use_narcotics_currently") }}</label
                     >
 
                     <Dropdown
@@ -135,7 +135,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -149,7 +149,7 @@ onMounted(async () => {
                     <label
                         for="current_narcotics_history"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("current_narcotics_history") }}</label
+                        >{{ $t("current_narcotics_history") }}</label
                     >
 
                     <Textarea
@@ -170,7 +170,7 @@ onMounted(async () => {
                     <label
                         for="use_narcotics_in_past"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("use_narcotics_in_past") }}</label
+                        >{{ $t("use_narcotics_in_past") }}</label
                     >
 
                     <Dropdown
@@ -178,7 +178,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -192,7 +192,7 @@ onMounted(async () => {
                     <label
                         for="past_narcotics_history"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("past_narcotics_history") }}</label
+                        >{{ $t("past_narcotics_history") }}</label
                     >
 
                     <Textarea
@@ -213,7 +213,7 @@ onMounted(async () => {
                     <label
                         for="have_been_arrested_before"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("have_been_arrested_before") }}</label
+                        >{{ $t("have_been_arrested_before") }}</label
                     >
 
                     <Dropdown
@@ -221,7 +221,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -235,7 +235,7 @@ onMounted(async () => {
                     <label
                         for="arrest_history"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("arrest_history") }}</label
+                        >{{ $t("arrest_history") }}</label
                     >
 
                     <Textarea
@@ -256,7 +256,7 @@ onMounted(async () => {
                     <label
                         for="have_been_prosecuted_before"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("have_been_prosecuted_before") }}</label
+                        >{{ $t("have_been_prosecuted_before") }}</label
                     >
 
                     <Dropdown
@@ -264,7 +264,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -278,7 +278,7 @@ onMounted(async () => {
                     <label
                         for="prosecution_history"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("prosecution_history") }}</label
+                        >{{ $t("prosecution_history") }}</label
                     >
 
                     <Textarea
@@ -299,7 +299,7 @@ onMounted(async () => {
                     <label
                         for="have_been_jailed_before"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("have_been_jailed_before") }}</label
+                        >{{ $t("have_been_jailed_before") }}</label
                     >
 
                     <Dropdown
@@ -307,7 +307,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -321,7 +321,7 @@ onMounted(async () => {
                     <label
                         for="jail_history"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("jail_history") }}</label
+                        >{{ $t("jail_history") }}</label
                     >
 
                     <Textarea
@@ -342,7 +342,7 @@ onMounted(async () => {
                     <label
                         for="is_taking_alcohol"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("is_taking_alcohol") }}</label
+                        >{{ $t("is_taking_alcohol") }}</label
                     >
 
                     <Dropdown
@@ -350,7 +350,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -364,7 +364,7 @@ onMounted(async () => {
                     <label
                         for="alcohol_history"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("alcohol_history") }}</label
+                        >{{ $t("alcohol_history") }}</label
                     >
 
                     <Textarea
@@ -385,7 +385,7 @@ onMounted(async () => {
                     <label
                         for="use_alcohol_in_past"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("use_alcohol_in_past") }}</label
+                        >{{ $t("use_alcohol_in_past") }}</label
                     >
 
                     <Dropdown
@@ -393,7 +393,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -407,7 +407,7 @@ onMounted(async () => {
                     <label
                         for="past_alcohol_history"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("past_alcohol_history") }}</label
+                        >{{ $t("past_alcohol_history") }}</label
                     >
 
                     <Textarea
@@ -428,7 +428,7 @@ onMounted(async () => {
                     <label
                         for="have_been_involved_in_robbery"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("have_been_involved_in_robbery") }}</label
+                        >{{ $t("have_been_involved_in_robbery") }}</label
                     >
 
                     <Dropdown
@@ -436,7 +436,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -450,7 +450,7 @@ onMounted(async () => {
                     <label
                         for="past_robbery_history"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("past_robbery_history") }}</label
+                        >{{ $t("past_robbery_history") }}</label
                     >
 
                     <Textarea
@@ -471,7 +471,7 @@ onMounted(async () => {
                     <label
                         for="have_been_a_rebel"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("have_been_a_rebel") }}</label
+                        >{{ $t("have_been_a_rebel") }}</label
                     >
 
                     <Dropdown
@@ -479,7 +479,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -493,7 +493,7 @@ onMounted(async () => {
                     <label
                         for="past_rebelious_history"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("past_rebelious_history") }}</label
+                        >{{ $t("past_rebelious_history") }}</label
                     >
 
                     <Textarea
@@ -514,7 +514,7 @@ onMounted(async () => {
                     <label
                         for="have_been_in_prostitution"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("have_been_in_prostitution") }}</label
+                        >{{ $t("have_been_in_prostitution") }}</label
                     >
 
                     <Dropdown
@@ -522,7 +522,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -536,7 +536,7 @@ onMounted(async () => {
                     <label
                         for="past_prostitution_history"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("past_prostitution_history") }}</label
+                        >{{ $t("past_prostitution_history") }}</label
                     >
 
                     <Textarea
@@ -557,7 +557,7 @@ onMounted(async () => {
                     <label
                         for="vices"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("vices") }}</label
+                        >{{ $t("vices") }}</label
                     >
 
                     <div
@@ -584,7 +584,7 @@ onMounted(async () => {
                     <label
                         for="is_virgin"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("is_virgin") }}</label
+                        >{{ $t("is_virgin") }}</label
                     >
 
                     <Dropdown
@@ -592,7 +592,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 

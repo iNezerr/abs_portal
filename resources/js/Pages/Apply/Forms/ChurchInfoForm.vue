@@ -86,7 +86,7 @@ onMounted(async () => {
                     <label
                         for="is_born_again"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("is_born_again") }}</label
+                        >{{ $t("is_born_again") }}</label
                     >
 
                     <Dropdown
@@ -94,7 +94,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -108,7 +108,7 @@ onMounted(async () => {
                     <label
                         for="history_before_born_again"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("history_before_born_again") }}</label
+                        >{{ $t("history_before_born_again") }}</label
                     >
 
                     <Textarea
@@ -129,7 +129,7 @@ onMounted(async () => {
                     <label
                         for="church"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("church") }}</label
+                        >{{ $t("church") }}</label
                     >
 
                     <InputText
@@ -147,7 +147,7 @@ onMounted(async () => {
                     <label
                         for="history_of_present_church"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("history_of_present_church") }}</label
+                        >{{ $t("history_of_present_church") }}</label
                     >
 
                     <Textarea
@@ -168,7 +168,7 @@ onMounted(async () => {
                     <label
                         for="duration_of_service"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("duration_of_service") }}</label
+                        >{{ $t("duration_of_service") }}</label
                     >
 
                     <InputNumber
@@ -188,7 +188,7 @@ onMounted(async () => {
                     <label
                         for="role_in_church"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("role_in_church") }}</label
+                        >{{ $t("role_in_church") }}</label
                     >
 
                     <Textarea
@@ -209,7 +209,7 @@ onMounted(async () => {
                     <label
                         for="history_of_roles_in_church"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("history_of_roles_in_church") }}</label
+                        >{{ $t("history_of_roles_in_church") }}</label
                     >
 
                     <Textarea
@@ -229,7 +229,7 @@ onMounted(async () => {
                     <label
                         for="is_called"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("is_called") }}</label
+                        >{{ $t("is_called") }}</label
                     >
 
                     <Dropdown
@@ -237,7 +237,7 @@ onMounted(async () => {
                         :options="yesNO"
                         optionLabel="name"
                         optionValue="value"
-                        :placeholder="__('select_placeholder')"
+                        :placeholder="$t('select_placeholder')"
                         class="w-full md:w-14rem"
                     />
 
@@ -251,7 +251,7 @@ onMounted(async () => {
                     <label
                         for="explain_calling"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("explain_calling") }}</label
+                        >{{ $t("explain_calling") }}</label
                     >
 
                     <InputText
@@ -271,7 +271,7 @@ onMounted(async () => {
                     <label
                         for="reason_for_coming_to_bible_school"
                         class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                        >{{ __("reason_for_coming_to_bible_school") }}</label
+                        >{{ $t("reason_for_coming_to_bible_school") }}</label
                     >
 
                     <Textarea

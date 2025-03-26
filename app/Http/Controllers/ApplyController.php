@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Log;
 use PDOException;
 use Carbon\Carbon;
 use Inertia\Inertia;
@@ -276,8 +277,13 @@ class ApplyController extends Controller
             $applicant->criminalInfo()->create($criminalInfo);
             $applicant->recommendationInfo()->create($recommendationInfo);
             $applicant->socialInfo()->create($socialInfo);
-
+            
             DB::commit();
+
+            dispatch(new SendNewApplicationEmailJob($details));
+
+            Log::info('Mail sent');
+            
             session()->forget('personal_info');
             session()->forget('church_info');
             session()->forget('health_info');
@@ -286,9 +292,6 @@ class ApplyController extends Controller
             session()->forget('social_info');
 
 
-            dispatch(new SendNewApplicationEmailJob($details));
-
-            Log::info('Mail sent');
 
             return to_route('apply.complete');
         } catch (PDOException $e) {

@@ -6,6 +6,8 @@ import "primevue/resources/primevue.min.css";
 import "primeicons/primeicons.css";
 import "primeicons/primeicons.css";
 
+import "/node_modules/flag-icons/css/flag-icons.min.css";
+
 import "../css/app.css";
 
 import { createApp, h } from "vue";
@@ -57,36 +59,32 @@ import Tooltip from "primevue/tooltip";
 
 import { i18nVue, trans } from "laravel-vue-i18n";
 
-const appName =
-    window.document.getElementsByTagName("title")[0]?.innerText || "Laravel";
+const appName = import.meta.env.VITE_APP_NAME || "Laravel";
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
     resolve: (name) =>
         resolvePageComponent(
             `./Pages/${name}.vue`,
-            import.meta.globEager("./Pages/**/*.vue") // Corrected import function
+            import.meta.glob("./Pages/**/*.vue")
         ),
     setup({ el, App, props, plugin }) {
-        const app = createApp({ render: () => h(App, props) });
-
-        app.use(i18nVue, {
-            resolve: async (lang) => {
-                const langs = await import.meta.glob("../../lang//*.json");
-                return await langs[`../../lang/${lang}.json`]();
-            },
-            onLoad: () => {
-                // app.mount(el);
-            },
-        });
-
-        app
+        return createApp({ render: () => h(App, props) })
             .use(plugin)
-            .use(ZiggyVue, Ziggy)
+            .use(ZiggyVue)
             .use(PrimeVue, { ripple: true })
             .use(ConfirmationService)
             .use(ToastService)
             .use(DialogService)
+            .use(i18nVue, {
+                resolve: async (lang) => {
+                    const langs = await import.meta.glob("../../lang//*.json");
+                    return await langs[`../../lang/${lang}.json`]();
+                },
+                onLoad: () => {
+                    // app.mount(el);
+                },
+            })
             .directive("tooltip", Tooltip)
             .directive("badge", BadgeDirective)
             .directive("ripple", Ripple)
@@ -122,13 +120,10 @@ createInertiaApp({
             .component("Textarea", Textarea)
             .component("Toast", Toast)
             .component("Toolbar", Toolbar)
-            .component(
-                "ToggleButton",
-                ToggleButton
-            ).config.globalProperties.__ = trans;
-        app.mount(el);
+
+            .mount(el);
     },
     progress: {
-        color: "#4B5",
+        color: "#4B5563",
     },
 });
